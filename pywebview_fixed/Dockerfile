@@ -1,4 +1,4 @@
-FROM nmaas87/docker-raspbian_xinit:jessie-20170426
+FROM nmaas87/docker-raspbian_xinit:fixed
 MAINTAINER Nico Maas <mail@nico-maas.de>
 ENV DEBIAN_FRONTEND noninteractive
 RUN [ "cross-build-start" ]
