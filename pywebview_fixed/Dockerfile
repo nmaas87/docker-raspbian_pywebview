@@ -9,7 +9,7 @@ RUN apt-get update \
     && apt-get autoremove -qqy \
     && apt-get autoclean -y \
     && apt-get clean && rm -rf /var/lib/apt/lists/* && mkdir /var/lib/apt/lists/partial \
-    && pip3 install --no-cache-dir Flask pywebview \
+    && pip3 install Flask pywebview \
     && mkdir /usr/src/app/templates /usr/src/app/static
 
 # copy program
