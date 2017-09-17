@@ -50,6 +50,7 @@ if __name__ == '__main__':
     t.start()
  
     webview.create_window("Calculator", "http://127.0.0.1:80/")
+    webview.evaluate_js('document.documentElement.style.zoom = 2.5')
     webview.toggle_fullscreen()
  
     sys.exit()
