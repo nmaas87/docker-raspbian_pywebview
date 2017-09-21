@@ -40,6 +40,9 @@ def index():
 
 def start_server():
     app.run(host="0.0.0.0",port="80");
+
+def evaluate_js():
+    webview.evaluate_js('document.documentElement.style.zoom = 1.0')
  
 if __name__ == '__main__':
     """  https://github.com/r0x0r/pywebview/blob/master/examples/http_server.py
@@ -48,7 +51,10 @@ if __name__ == '__main__':
     t = threading.Thread(target=start_server)
     t.daemon = True
     t.start()
- 
+
+    t2 = threading.Thread(target=evaluate_js)
+    t2.start()
+     
     webview.create_window("Calculator", "http://127.0.0.1:80/")
     webview.toggle_fullscreen()
  
